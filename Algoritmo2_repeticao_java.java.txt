@@ -1,14 +1,27 @@
 // Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
-
+import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
-    int x =0;
-    System.out.println("Hello world!");
+    // Declarar variaveis
+    String nome, senha;
+    // Ler nome e senha
+    System.out.print("Digite seu nome: ");
+    Scanner entrada = new Scanner(System.in);
+    nome = entrada.next();
+    System.out.print("Digite sua senha: ");
+    senha = entrada.next();
+    System.out.print("Digite seu Salario: ");
+    // Verificar se a senha é igual ao nome
+    while (nome.equals(senha)){
+      System.out.println("Senha invalida, digite novamente");
+      System.out.print("Digite sua senha: ");
+      senha = entrada.next();
+      
+    }
+    System.out.println("Nome " + nome );
+    System.out.println("Senha " + senha );
+    
   
   }
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
 }
