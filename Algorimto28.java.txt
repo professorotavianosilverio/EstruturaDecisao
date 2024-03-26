@@ -1,0 +1,31 @@
+//Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+   //Declarar variaveis
+    int quantidadeCDs;
+    double valorCDs;
+    double valorTotalInvestido = 0;
+    double valorMedioGasto = 0;
+    double valorTotalGasto = 0;
+    // Ler os dados informados pelo Usuario
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Informe a quantidade de CDs: ");
+    quantidadeCDs = sc.nextInt();  
+    //Laço de repetição
+    for(int i = 1; i <= quantidadeCDs; i++){
+      System.out.println("Informe o valor do CD " + i + ": ");
+      valorCDs = sc.nextDouble();
+      valorTotalInvestido += valorCDs;
+    }
+    // Imprimir o resultado
+    System.out.println("Valor total investido: " + valorTotalInvestido);
+    
+
+    
+  
+  }
+
+ 
+}
